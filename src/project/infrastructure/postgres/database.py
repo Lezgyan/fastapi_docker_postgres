@@ -7,6 +7,7 @@ from sqlalchemy.orm import DeclarativeBase
 
 from project.core.config import settings
 
+
 class PostgresDatabase:
     def __init__(self) -> None:
         self._engine = create_async_engine(settings.postgres_url)

@@ -1,12 +1,13 @@
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, ConfigDict, Field
 
 
-class DiseaseSchema(BaseModel):
+class DiseasesCreateUpdateSchema(BaseModel):
+    name: str
+    icd_code: str
+    description: str | None = Field(default=None)
+
+
+class DiseasesSchema(DiseasesCreateUpdateSchema):
     model_config = ConfigDict(from_attributes=True)
 
     disease_id: int
-    name: str
-    icd_code: str
-    description: str
-
-print(DiseaseSchema(disease_id=1, name="Сопли", icd_code="123", description="bad").dict())

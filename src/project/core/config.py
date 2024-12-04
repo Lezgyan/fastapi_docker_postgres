@@ -8,12 +8,12 @@ class Settings(BaseSettings):
     ENV: str = "DEV"
     LOG_LEVEL: str = "DEBUG"
 
-    POSTGRES_SCHEMA: str = "medicine"
+    POSTGRES_SCHEMA: str = "hospital"
     POSTGRES_HOST: str = "localhost"
-    POSTGRES_DB: str = "postgres"
+    POSTGRES_DB: str = "train_database"
     POSTGRES_PORT: int = 5432
     POSTGRES_USER: SecretStr = "postgres"
-    POSTGRES_PASSWORD: SecretStr = "postgres"
+    POSTGRES_PASSWORD: SecretStr = "123456"
     POSTGRES_RECONNECT_INTERVAL_SEC: int = 1
 
     @property
