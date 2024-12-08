@@ -1,9 +1,11 @@
+from datetime import datetime
+
 from pydantic import ConfigDict, BaseModel
 
 
 class PatientsCreateUpdateSchema(BaseModel):
     full_name: str
-    date_of_birth: str
+    date_of_birth: datetime
     snils: str
     medical_policy: str
 

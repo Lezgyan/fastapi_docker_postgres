@@ -107,4 +107,5 @@ else:
         ),
     )
 
+
     asyncio.run(run_migrations_online(connectable))

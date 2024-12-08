@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from pydantic import ConfigDict, Field, BaseModel
 
 
@@ -5,8 +7,8 @@ class MedicalHistoryCreateUpdateSchema(BaseModel):
     patient_id: int
     disease_id: int
     doctor_id: int
-    admission_date: str
-    discharge_date: str | None = Field(default=None)
+    admission_date: datetime
+    discharge_date: datetime | None = Field(default=None)
     notes: str | None = Field(default=None)
     ward_id: int
 
