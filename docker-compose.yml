@@ -25,7 +25,8 @@ services:
   app:
     depends_on:
       - postgres
-    image: fastapi_app
+#    image: fastapi_app
+    image: handsomeandrew/task2backend:latest
     volumes:
       - ./src:/app/src
     env_file:
@@ -34,9 +35,9 @@ services:
       - app_db_network
     ports:
       - '127.0.0.1:8020:8000'
-    build:
-      context: .
-    pull_policy: build
+#    build:
+#      context: .
+    # pull_policy: build
     entrypoint: sh -c "./src/start.sh"
 
 
